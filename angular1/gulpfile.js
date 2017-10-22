@@ -26,6 +26,9 @@ gulp.task('minify-css', function() {
         //.pipe(minifyCSS(opts))
         .pipe(gulp.dest('./dist/'))
 });
+gulp.task('concat-js', function () {
+    gulp.src(['./app/bower_components']);
+});
 gulp.task('minify-js', function() {
     gulp.src(['./app/**/*.js', '!./app/bower_components/**'])
         /*.pipe(uglify({
@@ -58,7 +61,7 @@ gulp.task('connectDist', function () {
 
 // default task
 gulp.task('default',
-    ['lint', 'connect']
+    ['build']
 );
 gulp.task('build', function(cb) {
     runSequence(
