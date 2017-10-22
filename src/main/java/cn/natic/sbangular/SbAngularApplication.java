@@ -11,11 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableAutoConfiguration
 public class SbAngularApplication {
 
-	@RequestMapping("/")
-	public String hello() {
-		return "Hello Spring Boot!";
-	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(SbAngularApplication.class, args);
 	}
