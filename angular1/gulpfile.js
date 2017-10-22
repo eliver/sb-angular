@@ -18,14 +18,14 @@ gulp.task('lint', function() {
         .pipe(jshint.reporter('fail'));
 });
 gulp.task('clean', function() {
-    return gulp.src('./dist/*')
+    return gulp.src('../src/main/resources/static/*')
         .pipe(clean({force: true}));
 });
 gulp.task('minify-css', function() {
     var opts = {comments:true,spare:true};
     gulp.src(['./app/**/*.css'])
         //.pipe(minifyCSS(opts))
-        .pipe(gulp.dest('./dist/'))
+        .pipe(gulp.dest('../src/main/resources/static/'))
 });
 gulp.task('minify-js', function() {
     gulp.src(['./app/**/*.js'])
@@ -33,14 +33,14 @@ gulp.task('minify-js', function() {
             // inSourceMap:
             // outSourceMap: "app.js.map"
         }))*/
-        .pipe(gulp.dest('./dist/'))
+        .pipe(gulp.dest('../src/main/resources/static/'))
 });
 gulp.task('bower', function () {
-    return bower();
+    return bower('./app/bower_components/');
 });
 gulp.task('copy-html-files', function () {
     gulp.src('./app/**/*.html')
-        .pipe(gulp.dest('dist/'));
+        .pipe(gulp.dest('../src/main/resources/static/'));
 });
 gulp.task('connect', function () {
     connect.server({
@@ -50,7 +50,7 @@ gulp.task('connect', function () {
 });
 gulp.task('connectDist', function () {
     connect.server({
-        root: 'dist/',
+        root: '../src/main/resources/static/',
         port: 9999
     });
 });
