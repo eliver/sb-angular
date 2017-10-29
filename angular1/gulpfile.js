@@ -12,10 +12,10 @@ var runSequence = require('run-sequence');
 
 // tasks
 gulp.task('lint', function() {
-    gulp.src(['./app/**/*.js', '!./app/bower_components/**'])
+   /* gulp.src(['./app/!**!/!*.js', '!./app/bower_components/!**'])
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
-        .pipe(jshint.reporter('fail'));
+        .pipe(jshint.reporter('fail'));*/
 });
 gulp.task('clean', function() {
     return gulp.src('../src/main/resources/static/*')
@@ -33,6 +33,10 @@ gulp.task('minify-js', function() {
             // inSourceMap:
             // outSourceMap: "app.js.map"
         }))*/
+        .pipe(gulp.dest('../src/main/resources/static/'))
+});
+gulp.task('statics', function() {
+    gulp.src(['./app/**/*.jpg', './app/**/*.png'])
         .pipe(gulp.dest('../src/main/resources/static/'))
 });
 gulp.task('bower', function () {
@@ -67,9 +71,10 @@ gulp.task('build', function(cb) {
             'lint',
             'minify-css',
             'minify-js',
+            'statics',
             'copy-html-files',
             'bower',
-            'connectDist'
+            'connect'
         ],
         cb
     );

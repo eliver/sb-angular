@@ -6,6 +6,7 @@
   "repository": "https://github.com/angular/angular-seed",
   "license": "MIT",
   "devDependencies": {
+    "angular-cookies": "^1.6.6",
     "bower": "^1.7.7",
     "gulp-bower": "0.0.13",
     "gulp-concat": "^2.6.1",
