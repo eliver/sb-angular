@@ -2,6 +2,7 @@ package cn.natic.sbangular.security;
 
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpHeaders;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
@@ -15,6 +16,7 @@ public class CorsConfig extends WebMvcConfigurerAdapter {
                 .allowedHeaders("*")
                 .allowCredentials(true)
                 .allowedMethods("GET", "POST")
+                .exposedHeaders(HttpHeaders.AUTHORIZATION)
                 .maxAge(3600);
     }
 
