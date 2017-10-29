@@ -1,0 +1,93 @@
+body {background: #f0f0f0;}
+.p-content{
+    width: 100%;
+    padding: 0;
+}
+
+.left_div{
+    width: 145px;
+    display: table-cell;
+    min-height: 600px;
+    margin: 0;
+    padding: 0;
+}
+.content{
+    margin:0;
+    width: 818px;
+    display: table-cell;
+    padding: 10px 20px;
+    border-left: #e3e3e3 1px solid;
+}
+
+.content_bb_cur{
+    margin:0;
+    width: 995px;
+    display: table-cell;
+    padding: 20px;
+}
+
+.add-rec-div{
+    border-radius: 0px 4px 0px 0px;
+    width: 40px;
+    height: 110px;
+    background-color: #ee5b56;
+    top: 140px;
+    margin-left: 1040px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    position: fixed;
+    border-radius: 0px 4px 4px 0px;
+}
+@media screen and (max-width: 1140px) {
+    .add-rec-div, .import-rec-div {
+        right: 0px;
+        margin-left: 0px;
+    }
+}
+
+.add-rec-ico{
+    margin-top: 12px;
+    margin-left: 8px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-image: url("/img/record/icon_xiugai_pass.png");
+
+}
+.add-rec-text{
+    margin-top: 10px;
+    font-size: 16px;
+    width:30px;
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+    line-height: 18px;
+    text-align: center;
+}
+
+.import-rec-div{
+    border-radius: 0px 4px 4px 0px;
+    width: 40px;
+    background-color: #5da3f3;
+    top: 260px;
+    margin-left: 1040px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    position: fixed;
+}
+.import-rec-div a {
+    display: block;
+    font-size: 16px;
+    width:30px;
+    padding: 10px 5px 10px;
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+    line-height: 18px;
+    text-align: center;
+}
+.import-rec-text{
+    border-bottom: 1px solid #3c8dea;
+}
