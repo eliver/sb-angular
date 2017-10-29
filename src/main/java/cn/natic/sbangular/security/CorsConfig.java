@@ -1,4 +1,4 @@
-package cn.natic.sbangular.config;
+package cn.natic.sbangular.security;
 
 
 import org.springframework.context.annotation.Configuration;
