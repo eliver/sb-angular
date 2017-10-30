@@ -14,6 +14,9 @@ LoginCtrl.$inject = ['$scope', '$location', 'RestService'];
 
 function LoginCtrl($scope, $location, RestService) {
 
+  $scope.username = '';
+  $scope.password = '';
+
   $scope.login = function () {
     RestService.login($scope.username, $scope.password)
       .then(function (data) {
