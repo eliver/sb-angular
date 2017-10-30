@@ -22,7 +22,7 @@ function LoginCtrl($scope, $location, RestService) {
       .then(function (data) {
         var token = data('Authorization');
         if (token) {
-          $location.path("/view2");
+          $location.path("/p2p");
         }
       });
   }
