@@ -1,7 +1,7 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', ['ngRoute', 'ngCookies', 'myApp.login', 'myApp.view1', 'myApp.view2'])
+angular.module('myApp', ['ngRoute', 'ngCookies', 'myApp.login','myApp.p2p', 'myApp.view1', 'myApp.view2'])
   .config(myRoute)
   .config(httpInterceptorRegistry)
   .factory('accessTokenHttpInterceptor', accessTokenHttpInterceptor);
