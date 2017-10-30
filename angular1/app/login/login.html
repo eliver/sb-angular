@@ -11,18 +11,16 @@
 <div class="login-block">
   <h1>登录</h1>
   <input type="text"
-         value=""
          placeholder="用户名"
          id="username"
          ng-model="username"
          ng-keyup="enterEvent($event)"/>
   <input type="password"
-         value=""
          placeholder="密码"
          id="password"
          ng-model="password"
          ng-keyup="enterEvent($event)"/>
-  <button class="btn" ng-click="login()" ng-disabled="username.length == 0 || password.length == 0">登录</button>
+  <button ng-click="login()">登录</button>
 </div>
 </body>
 </html>
