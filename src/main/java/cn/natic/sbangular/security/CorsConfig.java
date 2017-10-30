@@ -1,7 +1,8 @@
-package cn.natic.sbangular.config;
+package cn.natic.sbangular.security;
 
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpHeaders;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
@@ -14,7 +15,8 @@ public class CorsConfig extends WebMvcConfigurerAdapter {
                 .allowedOrigins("http://localhost:8888", "http://localhost:9999")
                 .allowedHeaders("*")
                 .allowCredentials(true)
-                .allowedMethods("GET", "POST", "DELETE", "PUT")
+                .allowedMethods("GET", "POST")
+                .exposedHeaders(HttpHeaders.AUTHORIZATION)
                 .maxAge(3600);
     }
 
