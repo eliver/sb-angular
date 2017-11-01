@@ -1,9 +1,11 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
+
 angular.module('myApp', ['ui.router', 'ngCookies', 'myApp.login', 'myApp.p2p', 'myApp.view1', 'myApp.view2'])
     .config(httpInterceptorRegistry)
     .factory('accessTokenHttpInterceptor', accessTokenHttpInterceptor);
+
 
 
 //Create a route provider
