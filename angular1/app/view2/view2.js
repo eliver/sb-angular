@@ -1,12 +1,12 @@
 'use strict';
 
-angular.module('myApp.view2', ['ngRoute'])
+angular.module('myApp.view2', ['ui.router'])
 
-    .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/view2', {
+    .config(['$stateProvider', function ($stateProvider) {
+        var p2pState = {name:'view2',url:'/view2',
             templateUrl: 'view2/view2.html',
-            controller: 'View2Ctrl'
-        });
+            controller: 'View2Ctrl'}
+        $stateProvider.state(p2pState);
     }])
     .controller('View2Ctrl', View2Ctrl);
 
