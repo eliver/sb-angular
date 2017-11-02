@@ -1,0 +1,51 @@
+.search-div {
+    position: relative;
+    background-color: #fafbfd;
+    height: 40px;
+    padding: 5px 17px;
+    margin: 10px 0 20px;
+    line-height: 40px;
+    color: #494949;
+}
+
+
+/*日期*/
+.date_in{
+    height: 26px;
+    line-height: 26px;
+    width: 110px;
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    text-indent: 5px;
+    color: #2e2e2e;
+    font-size: 12px;
+    margin: 0 5px;
+}
+.date-icns {
+    display: inline-block;
+    background-image: url("/img/record/icon_meiyuehk_nor.png");
+    background-size: cover;
+    position: absolute;
+    z-index: 0;
+    top: 17px;
+    width: 20px;
+    height: 20px;
+}
+.icn_0{
+    left: 125px;
+}
+.icn_1{
+    left: 270px;
+}
+#submit{
+    height: 28px;
+    width: 80px;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    background: #5da3f3;
+    text-align: center;
+    display: inline-block;
+    line-height: 26px;
+    border-radius: 2px;
+}
