@@ -1,5 +1,5 @@
 
-angular.module('myApp.p2p',['ui.router'])
+angular.module('myApp.p2p',['ui.router','p2p.client_account'])
     .config(['$stateProvider', function ($stateProvider) {
         var p2pState = {name:'p2p',url:'/p2p',
             templateUrl: 'p2p/p2p.html',
