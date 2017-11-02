@@ -174,9 +174,9 @@
         </script>
         <div class="menu">
           <ul>
-            <li class="lis on" id="m_0"><a href="/record/p2p/client_account/0"><i class="icns icn1"></i>资产概览<i
+            <li class="lis" ui-sref-active="on" id="m_0"><a ui-sref="p2p.client_account"><i class="icns icn1"></i>资产概览<i
                 class="icn_pass pass" id="i_0"></i></a></li>
-            <li class="lis" id="m_1"><a href="/record/p2p/investment_record/1"><i class="icns icn2"></i>投资记录<i
+            <li class="lis" ui-sref-active="on" id="m_1"><a ui-sref="p2p.invest"><i class="icns icn2"></i>投资记录<i
                 class="icn_pass" id="i_1"></i></a></li>
             <li class="lis" id="m_2"><a href="/record/p2p/payback_trend/2"><i class="icns icn3"></i>每月回款<i
                 class="icn_pass" id="i_2"></i></a></li>
@@ -187,51 +187,9 @@
           </ul>
         </div>
       </div>
-      <div class="content">
+      <div class="content" ui-view>
 
-        <div>
-          <p class="rc-title">投资记录</p>
-        </div>
 
-        <div class="table box martop">
-          <table id="data-content">
-            <tbody>
-            <tr id="order">
-              <th index="0" colspan="2" class="down">平台&nbsp;/&nbsp;项目名称<i class="icn order-icn"></i></th>
-              <th index="1" class="">投资日期<i class="icn order-icn"></i></th>
-              <th index="2">投入本金<i class="icn order-icn"></i></th>
-              <th index="3">项目年化<i class="icn order-icn"></i></th>
-              <th index="4">总奖励<i class="icn order-icn"></i></th>
-              <th index="5">待收总额<i class="icn order-icn"></i></th>
-              <th style="text-align: center">详情</th>
-              <th style="text-align: center">操作</th>
-              <th index="6" style="text-align: center">备注<i class="icn order-icn"></i></th>
-            </tr>
-            <tr class="recond_footer">
-              <td colspan="2">合计</td>
-              <td>--</td>
-              <td>0.00</td>
-              <td>0.00%</td>
-              <td>0.00</td>
-              <td><span title="待收本金:0.00 待收收益:0.00">0.00</span></td>
-              <td style="text-align: center">--</td>
-              <td style="text-align: center">--</td>
-              <td style="text-align: center">--</td>
-            </tr>
-            </tbody>
-          </table>
-
-          <div class="pager" style="border:0">
-            <div id="pager" style="border:0">
-              <ul class="pages">
-                <li class="pgNext pgEmpty">首页</li>
-                <li class="pgNext pgEmpty">上一页</li>
-                <li class="pgNext pgEmpty">下一页</li>
-                <li class="pgNext pgEmpty">尾页</li>
-              </ul>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
