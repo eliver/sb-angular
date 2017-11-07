@@ -13,8 +13,6 @@ body {background: #f0f0f0;}
 }
 .content{
     margin:0;
-    width: 818px;
-    display: table-cell;
     padding: 10px 20px;
     border-left: #e3e3e3 1px solid;
 }

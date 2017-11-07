@@ -5,8 +5,9 @@ angular.module('p2p.client_account',['ui.router'])
             controller: 'clientAccountCtrl'};
         $stateProvider.state(p2pState);
     }])
-    .controller('clientAccountCtrl', clientAccountCtrl);
-p2pCtrl.$inject = ['$scope', '$location', 'RestService'];
-function clientAccountCtrl($scope, $location, RestService) {
-
-}
+    .controller('clientAccountCtrl', ['$scope', '$location', 'RestService',function ($scope, $location, RestService) {
+        var ctrl = this;
+        RestService.getAccountDetail().then(function (data) {
+            ctrl.ClientInfo = data;
+        })
+    }]);

@@ -1,73 +1,76 @@
 <link rel="stylesheet" href="clientAccount/clientAccount.css">
-<div class="border-bou">
+<div ng-controller="clientAccountCtrl as ctr">
+    <div class="border-bou">
 
-    <p class="rc-title"><span id="zcgk-title">资产概况</span><span class="zcgk-tip" id="zcgk-tip" style="display: none;">网页版的该页面仅统计P2P定活期，贷基宝宝类账本的数据<i
-            class="zcgk-close-btn" id="zcgk-close-btn"></i></span></p>
+        <p class="rc-title"><span id="zcgk-title">资产概况</span><span class="zcgk-tip" id="zcgk-tip" style="display: none;">网页版的该页面仅统计P2P定活期，贷基宝宝类账本的数据<i
+                class="zcgk-close-btn" id="zcgk-close-btn"></i></span></p>
+    </div>
+    <table class="p-zctab" >
+        <tbody>
+        <tr class="p-zctitle">
+            <td>
+                待收总额
+            </td>
+            <td>
+                待收本金
+            </td>
+            <td>
+                待收收益
+            </td>
+            <td>
+                已收收益
+            </td>
+        </tr>
+        <tr class="p-zc-num">
+            <td>
+                {{ctr.ClientInfo.futureSum}}
+            </td>
+            <td>
+                {{ctr.ClientInfo.futurePrincipal}}
+            </td>
+            <td>
+                {{ctr.ClientInfo.futureInterest}}
+            </td>
+            <td>
+                {{ctr.ClientInfo.currentInterest}}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="rc-p">
+        <p class="rc-title border-bou"></p>
+    </div>
+    <table class="p2-zctab">
+        <tbody>
+        <tr class="rc-zctitle">
+            <td>
+                总收益
+            </td>
+            <td>
+                总利息
+            </td>
+            <td>
+                总奖励
+            </td>
+            <td>
+                在投年化收益
+            </td>
+        </tr>
+        <tr class="rc-zc-num">
+            <td>
+                {{ctr.ClientInfo.sum}}
+            </td>
+            <td>
+                {{ctr.ClientInfo.sumInterest}}
+            </td>
+            <td>
+                {{ctr.ClientInfo.sumBonus}}
+            </td>
+            <td>
+                {{ctr.ClientInfo.interestRate}}
+            </td>
+        </tr>
+        </tbody>
+    </table>
 </div>
-<table class="p-zctab">
-    <tbody>
-    <tr class="p-zctitle">
-        <td>
-            待收总额
-        </td>
-        <td>
-            待收本金
-        </td>
-        <td>
-            待收收益
-        </td>
-        <td>
-            已收收益
-        </td>
-    </tr>
-    <tr class="p-zc-num">
-        <td>
-            0.00
-        </td>
-        <td>
-            0.00
-        </td>
-        <td>
-            0.00
-        </td>
-        <td>
-            0.00
-        </td>
-    </tr>
-    </tbody>
-</table>
-<div class="rc-p">
-    <p class="rc-title border-bou"></p>
-</div>
-<table class="p2-zctab">
-    <tbody>
-    <tr class="rc-zctitle">
-        <td>
-            总收益
-        </td>
-        <td>
-            总利息
-        </td>
-        <td>
-            总奖励
-        </td>
-        <td>
-            在投年化收益
-        </td>
-    </tr>
-    <tr class="rc-zc-num">
-        <td>
-            0.00
-        </td>
-        <td>
-            0.00
-        </td>
-        <td>
-            0.00
-        </td>
-        <td>
-            0.00%
-        </td>
-    </tr>
-    </tbody>
-</table>
+
