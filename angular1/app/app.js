@@ -3,6 +3,9 @@
 // Declare app level module which depends on views, and components
 
 angular.module('myApp', ['ui.router', 'ngCookies', 'myApp.login', 'myApp.p2p','myApp.investmentRecord'])
+    .config(['$urlRouterProvider',function ($urlRouterProvider) {
+        $urlRouterProvider.when('', '/login');
+    }])
     .config(httpInterceptorRegistry)
     .factory('accessTokenHttpInterceptor', accessTokenHttpInterceptor);
 

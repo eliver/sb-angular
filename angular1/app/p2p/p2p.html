@@ -1,198 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <link rel="stylesheet" href="p2p/header.css">
-  <link rel="stylesheet" href="p2p/style.css">
-  <link rel="stylesheet" href="p2p/frame.css">
-  <link rel="stylesheet" href="p2p/p2p.css">
-  <link rel="stylesheet" href="p2p/tableData.css">
-  <link rel="stylesheet" href="p2p/searchPanel.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="p2p/header.css">
+    <link rel="stylesheet" href="p2p/style.css">
+    <link rel="stylesheet" href="p2p/frame.css">
+    <link rel="stylesheet" href="p2p/p2p.css">
+    <link rel="stylesheet" href="p2p/tableData.css">
+    <link rel="stylesheet" href="p2p/searchPanel.css">
 </head>
 <body>
 <div class="header header-index down-header">
-  <div class="top-layout clr">
-    <a class="bdd-logo" href="/index"><h1 class="logo" id="logo"></h1></a>
-    <div class="nav_head clr" id="nav-head">
-      <ul id="index_head_list" class="clr">
-        <li id="li_login" class="li li_login fr">
-          <div id="loginTag" style="display: none">
-            <a id="loginBtn" class="login-btn" href="#loginBox">登录</a><span class="seq">|</span><a
-              id="regist-btn" class="regist-btn" href="/register">注册</a>
-          </div>
-          <div id="loggedBtn" style="">
-            <a id="slogan" href="/bbs/author/b9653e9e-bc8a-11e7-b708-8038bc0bae77">yi shao</a><span
-              class="seq">|</span><a class="log-out" href="/action/user/logout">退出</a>
-          </div>
-        </li>
-        <li id="li_down" class="li fr"><a href="/down">下载</a></li>
-        <li id="li_calc" class="li fr"><a href="/calc">计算器</a></li>
-        <li id="li_bbs" class="li fr"><a href="/bbs/bbs_index">社区</a></li>
-        <li id="li_news" class="li fr"><a href="/news/index">资讯</a></li>
-        <li id="li_platform" class="li li-platform fr">
-          <a href="/platform_nav">平台</a>
-          <ul class="platform-first-menu">
-            <li><a href="/platform_nav">平台导航</a></li>
-            <li class="li-hot-platform">
-              <a class="hot-platform-nav" href="javascript:;">热门平台</a>
-              <ul class="platform-second-menu hot-platform-menu">
-                <li><a href="/platform/mindai" title="民贷天下" target="_blank">民贷天下</a></li>
-                <li><a href="/platform/touna" title="投哪网" target="_blank">投哪网</a></li>
-                <li><a href="/platform/ppmoney" title="PPmoney" target="_blank">PPmoney</a></li>
-              </ul>
-              <i class="arrow-right"></i>
-            </li>
-            <li class="li-risk-platform" id="li-risk-platform">
-              <a class="risk-platform-nav" href="javascript:;">问题平台</a>
-              <ul class="platform-second-menu risk-platform-menu" id="risk-platform-menu">
+    <div class="top-layout clr">
+        <a class="bdd-logo" href="/index"><h1 class="logo" id="logo"></h1></a>
+        <div class="nav_head clr" id="nav-head">
+            <ul id="index_head_list" class="clr">
+                <li id="li_login" class="li li_login fr">
+                    <div id="loginTag" style="display: none">
+                        <a id="loginBtn" class="login-btn" href="#loginBox">登录</a><span class="seq">|</span><a
+                            id="regist-btn" class="regist-btn" href="/register">注册</a>
+                    </div>
+                    <div id="loggedBtn" style="">
+                        <a id="slogan" href="/bbs/author/b9653e9e-bc8a-11e7-b708-8038bc0bae77">yi shao</a><span
+                            class="seq">|</span><a class="log-out" href="/action/user/logout">退出</a>
+                    </div>
+                </li>
+                <li id="li_down" class="li fr" ui-sref-active="on"><a ui-sref="p2p.payback_detail">回款明细</a></li>
+                <li id="li_calc" class="li fr" ui-sref-active="on"><a ui-sref="p2p.payback_trend">每月回款</a></li>
+                <li id="li_bbs" class="li fr" ui-sref-active="on"><a ui-sref="p2p.invest">投资记录</a></li>
+                <li id="li_news" class="li fr" ui-sref-active="on"><a ui-sref="p2p.client_account">资产概览</a></li>
 
-              </ul>
-              <i class="arrow-right"></i>
-            </li>
-          </ul>
-        </li>
-        <li id="li_record" class="li fr on"><a href="/record/record">记账</a>
-        </li>
-        <li id="li_index" class="li fr"><a href="/index">首页</a></li>
-      </ul>
+            </ul>
+        </div>
+        <div class="down_nav_head clr" id="down_nav_head" style="display: none">
+            <ul id="down_head_list" class="down-head-list clr">
+                <li class="top-qr"><span class="top-icon-qr"></span></li>
+                <li class="top-ios-download"><a
+                        href="https://itunes.apple.com/cn/app/bei-duo-duo-p2p-ji-zhang-ben/id982758376?mt=8">立即下载</a>
+                </li>
+                <li class="top-android-download"><a href="http://res.daiyoubang.com/apks/beidd.apk">立即下载</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="down_nav_head clr" id="down_nav_head" style="display: none">
-      <ul id="down_head_list" class="down-head-list clr">
-        <li class="top-qr"><span class="top-icon-qr"></span></li>
-        <li class="top-ios-download"><a
-            href="https://itunes.apple.com/cn/app/bei-duo-duo-p2p-ji-zhang-ben/id982758376?mt=8">立即下载</a>
-        </li>
-        <li class="top-android-download"><a href="http://res.daiyoubang.com/apks/beidd.apk">立即下载</a></li>
-      </ul>
-    </div>
-  </div>
 </div>
 <div class="main-div">
-  <div class="content-div">
-    <div class="p-content">
-      <div class="left_div">
+    <div class="content-div">
+        <div class="p-content">
 
-        <style>
-          .icns {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            margin-left: 25px;
-            margin-right: 10px;
-            margin-bottom: 5px;
-            vertical-align: middle;
-          }
+            <div class="content" ui-view>
 
-          .lis {
-            vertical-align: middle;
-            height: 62px;
-            font-size: 13px;
 
-          }
-
-          .menu .lis a {
-            display: block;
-            line-height: 62px;
-            color: #828282;
-          }
-
-          .menu .lis a:hover, .menu .lis.on a {
-            background: #ecf3fc;
-            padding-left: 0;
-            color: #4da3ec;
-          }
-
-          .icn1 {
-            background-image: url("/img/record/icon_zichangk_nor.png");
-          }
-
-          .icn2 {
-            background-image: url("/img/record/icon_touzijl_nor.png");
-          }
-
-          .icn3 {
-            background-image: url("/img/record/icon_meiyuehk_nor.png");
-          }
-
-          .icn4 {
-            background-image: url("/img/record/icon_huikuanmx_nor.png");
-          }
-
-          .icn5 {
-            background-image: url("/img/record/icon_pingtaipz_nor.png");
-          }
-
-          .on .icn1, .menu .lis a:hover .icn1 {
-            background-image: url("/img/record/icon_zichangk_pass.png");
-          }
-
-          .on .icn2, .menu .lis a:hover .icn2 {
-            background-image: url("/img/record/icon_touzijl_pass.png");
-          }
-
-          .on .icn3, .menu .lis a:hover .icn3 {
-            background-image: url("/img/record/icon_meiyuehk_pass.png");
-          }
-
-          .on .icn4, .menu .lis a:hover .icn4 {
-            background-image: url("/img/record/icon_huikuanmx_pass.png");
-          }
-
-          .on .icn5, .menu .lis a:hover .icn5 {
-            background-image: url("/img/record/icon_pingtaipz_pass.png");
-          }
-
-          .icn_pass {
-            display: block;
-            height: 62px;
-            width: 14px;
-            float: right;
-          }
-
-          .icn_pass.pass {
-            margin-right: -4px;
-            background-image: url("/img/record/daohang_pass.png");
-          }
-
-        </style>
-        <script>
-          $(function () {
-            var menuIndex = '0';
-            $(".lis").each(function () {
-              $(this).removeClass('on');
-            });
-
-            $(".icn_pass").each(function () {
-              $(this).removeClass('pass');
-            });
-
-            $("#m_" + menuIndex).addClass("on");
-            $("#i_" + menuIndex).addClass("pass");
-          });
-
-        </script>
-        <div class="menu">
-          <ul>
-            <li class="lis" ui-sref-active="on" id="m_0"><a ui-sref="p2p.client_account"><i class="icns icn1"></i>资产概览<i
-                class="icn_pass pass" id="i_0"></i></a></li>
-            <li class="lis" ui-sref-active="on" id="m_1"><a ui-sref="p2p.invest"><i class="icns icn2"></i>投资记录<i
-                class="icn_pass" id="i_1"></i></a></li>
-            <li class="lis" ui-sref-active="on" id="m_2"><a ui-sref="p2p.payback_trend"><i class="icns icn3"></i>每月回款<i
-                class="icn_pass" id="i_2"></i></a></li>
-            <li class="lis" ui-sref-active="on" id="m_3"><a ui-sref="p2p.payback_detail"><i class="icns icn4"></i>回款明细<i
-                class="icn_pass" id="i_3"></i></a></li>
-
-          </ul>
+            </div>
         </div>
-      </div>
-      <div class="content" ui-view>
 
-
-      </div>
     </div>
-
-  </div>
 </div>
 </body>
 </html>
