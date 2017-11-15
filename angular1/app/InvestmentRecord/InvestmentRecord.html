@@ -3,7 +3,7 @@
     <p class="rc-title">投资记录</p>
 </div>
 
-<div class="table box martop">
+<div class="table box martop" ng-controller="InvestmentRecordCtrl as ctrl">
     <table id="data-content">
         <tbody>
         <tr id="order">
@@ -17,6 +17,15 @@
             <th style="text-align: center">操作</th>
             <th index="6" style="text-align: center">备注<i class="icn order-icn"></i></th>
         </tr>
+
+        <tr ng-repeat="item in ctrl.dataList">
+            <td colspan="2">{{item.platform_name}}</td>
+            <td>{{item.investment_date}}</td>
+            <td>{{item.primary_money}}</td>
+            <td>{{item.invest_interest_rate}}</td>
+            <td>{{item.total_bonus}}</td>
+            <td>{{item.future_total}}</td>
+        </tr>
         <tr class="recond_footer">
             <td colspan="2">合计</td>
             <td>--</td>
@@ -24,9 +33,7 @@
             <td>0.00%</td>
             <td>0.00</td>
             <td><span title="待收本金:0.00 待收收益:0.00">0.00</span></td>
-            <td style="text-align: center">--</td>
-            <td style="text-align: center">--</td>
-            <td style="text-align: center">--</td>
+
         </tr>
         </tbody>
     </table>

@@ -1,0 +1,18 @@
+[{
+  "platform_name":"nokia",
+  "investment_date":"2017-11-07",
+  "primary_money":10000,
+  "invest_interest_rate":"10.80%",
+  "total_bonus":0,
+  "future_total":10540
+
+},{
+  "platform_name":"pwc",
+  "investment_date":"2017-11-08",
+  "primary_money":10000,
+  "invest_interest_rate":"10.80%",
+  "total_bonus":0,
+  "future_total":10540
+
+}
+]

@@ -5,8 +5,9 @@ angular.module('myApp.investmentRecord',['ui.router'])
             controller: 'InvestmentRecordCtrl'};
         $stateProvider.state(p2pState);
     }])
-    .controller('InvestmentRecordCtrl', InvestmentRecordCtrl);
-p2pCtrl.$inject = ['$scope', '$location', 'RestService'];
-function InvestmentRecordCtrl($scope, $location, RestService) {
-
-}
+    .controller('InvestmentRecordCtrl', ['$scope', '$location', 'RestService',function ($scope, $location, RestService) {
+        var ctrl = this;
+        RestService.getInvestRecord().then(function (data) {
+            ctrl.dataList = data;
+        })
+    }]);

@@ -49,5 +49,14 @@ function RestService($http, $q) {
         });
         return deferred.promise;
     };
+    svc.getInvestRecord = function () {
+        var deferred = $q.defer();
+        $http.get('mockData/Invest_Record.json').then(function (response) {
+            deferred.resolve(response.data);
+        }, function () {
+            deferred.reject(value.statusText);
+        });
+        return deferred.promise;
+    };
     return svc;
 }
