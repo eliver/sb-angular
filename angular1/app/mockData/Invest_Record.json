@@ -1,13 +1,37 @@
 [{
-  "platform_name":"nokia",
-  "investment_date":"2017-11-07",
+  "platform_name":"94bank",
+  "investment_date":"2017-11-16",
   "primary_money":10000,
   "invest_interest_rate":"10.80%",
   "total_bonus":0,
   "future_total":10540
 
 },{
-  "platform_name":"pwc",
+  "platform_name":"21世纪财富",
+  "investment_date":"2017-11-08",
+  "primary_money":10000,
+  "invest_interest_rate":"10.80%",
+  "total_bonus":0,
+  "future_total":10540
+
+},{
+  "platform_name":"51人品",
+  "investment_date":"2017-11-08",
+  "primary_money":10000,
+  "invest_interest_rate":"10.80%",
+  "total_bonus":0,
+  "future_total":10540
+
+},{
+  "platform_name":"牛牛bank",
+  "investment_date":"2017-11-08",
+  "primary_money":10000,
+  "invest_interest_rate":"10.80%",
+  "total_bonus":0,
+  "future_total":10540
+
+},{
+  "platform_name":"宜人贷",
   "investment_date":"2017-11-08",
   "primary_money":10000,
   "invest_interest_rate":"10.80%",

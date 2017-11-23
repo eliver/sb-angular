@@ -5,9 +5,11 @@ angular.module('myApp.investmentRecord',['ui.router'])
             controller: 'InvestmentRecordCtrl'};
         $stateProvider.state(p2pState);
     }])
-    .controller('InvestmentRecordCtrl', ['$scope', '$location', 'RestService',function ($scope, $location, RestService) {
+    .controller('InvestmentRecordCtrl', ['$scope', '$location', 'RestService','NgTableParams',function ($scope, $location, RestService,NgTableParams) {
         var ctrl = this;
         RestService.getInvestRecord().then(function (data) {
             ctrl.dataList = data;
-        })
+            ctrl.tableParams = new NgTableParams({ count: 5}, { counts: [5, 10, 25], dataset: data});
+        });
+
     }]);

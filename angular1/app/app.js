@@ -2,7 +2,7 @@
 
 // Declare app level module which depends on views, and components
 
-angular.module('myApp', ['ui.router', 'ngCookies', 'myApp.login', 'myApp.p2p','myApp.investmentRecord'])
+angular.module('myApp', ['ui.router', 'ngCookies', 'myApp.login', 'myApp.p2p','myApp.investmentRecord','ngTable'])
     .config(['$urlRouterProvider',function ($urlRouterProvider) {
         $urlRouterProvider.when('', '/login');
     }])
