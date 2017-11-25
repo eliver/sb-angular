@@ -19,6 +19,11 @@ public class InvestController {
     @Autowired
     InvestRepository repository;
 
+    @RequestMapping("/addInvests")
+    public void addInvests(List<Invest> invests) {
+        repository.addInvest(invests);
+    }
+
     @RequestMapping("/clientAccount")
     public ClientAccount getClientAccount() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
