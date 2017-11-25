@@ -4,10 +4,10 @@ import java.math.BigDecimal;
 
 public class ClientAccount {
 
-    private BigDecimal collectedAmount;
-    private BigDecimal collectedPrincipal;
+    private BigDecimal toBeCollectedAmount;
+    private BigDecimal toBeCollectedPrincipal;
 
-    private BigDecimal collectedInterest;
+    private BigDecimal toBeCollectedInterest;
     private BigDecimal earnedInterest;
     private BigDecimal todayInterest;
 
@@ -15,28 +15,28 @@ public class ClientAccount {
     private BigDecimal interestPerYear;
 
 
-    public BigDecimal getCollectedAmount() {
-        return collectedAmount;
+    public BigDecimal getToBeCollectedAmount() {
+        return toBeCollectedAmount;
     }
 
-    public void setCollectedAmount(BigDecimal collectedAmount) {
-        this.collectedAmount = collectedAmount;
+    public void setToBeCollectedAmount(BigDecimal toBeCollectedAmount) {
+        this.toBeCollectedAmount = toBeCollectedAmount;
     }
 
-    public BigDecimal getCollectedPrincipal() {
-        return collectedPrincipal;
+    public BigDecimal getToBeCollectedPrincipal() {
+        return toBeCollectedPrincipal;
     }
 
-    public void setCollectedPrincipal(BigDecimal collectedPrincipal) {
-        this.collectedPrincipal = collectedPrincipal;
+    public void setToBeCollectedPrincipal(BigDecimal toBeCollectedPrincipal) {
+        this.toBeCollectedPrincipal = toBeCollectedPrincipal;
     }
 
-    public BigDecimal getCollectedInterest() {
-        return collectedInterest;
+    public BigDecimal getToBeCollectedInterest() {
+        return toBeCollectedInterest;
     }
 
-    public void setCollectedInterest(BigDecimal collectedInterest) {
-        this.collectedInterest = collectedInterest;
+    public void setToBeCollectedInterest(BigDecimal toBeCollectedInterest) {
+        this.toBeCollectedInterest = toBeCollectedInterest;
     }
 
     public BigDecimal getEarnedInterest() {
