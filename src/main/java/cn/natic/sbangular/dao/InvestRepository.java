@@ -7,4 +7,6 @@ public interface InvestRepository extends JpaRepository<Invest, Long> {
 
     List<Invest> findByOwner(String owner);
 
+    void addInvest(List<Invest> invests);
+
 }
