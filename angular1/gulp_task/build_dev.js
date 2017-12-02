@@ -31,7 +31,7 @@ gulp.task('other',function () {
 );
 
 gulp.task('js_main',function () {
-        return gulp.src(['./app/**/*.js','!./app/bower_components/**'])
+        return gulp.src(['./app/app.js', './app/**/*.js','!./app/bower_components/**'])
             .pipe(concat('main.js'))
             .pipe(gulp.dest('./dist/js'));
     }

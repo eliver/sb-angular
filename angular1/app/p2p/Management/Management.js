@@ -4,9 +4,9 @@ angular.module('myApp.management', ['ui.router'])
 
   .config(['$stateProvider', function ($stateProvider) {
     var managementState = {
-      name: 'management',
+      name: 'p2p.management',
       url: '/management',
-      templateUrl: 'Management/Management.html',
+      templateUrl: 'p2p/Management/Management.html',
       controller: 'ManagementCtrl'
     }
     $stateProvider.state(managementState);

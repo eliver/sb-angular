@@ -40,22 +40,22 @@
 }
 
 .login-block input#username {
-    background: #fff url('username.png') 20px top no-repeat;
+    background: #fff url('/login/username.png') 20px top no-repeat;
     background-size: 16px 80px;
 }
 
 .login-block input#username:focus {
-    background: #fff url('username.png') 20px bottom no-repeat;
+    background: #fff url('/login/username.png') 20px bottom no-repeat;
     background-size: 16px 80px;
 }
 
 .login-block input#password {
-    background: #fff url('password.png') 20px top no-repeat;
+    background: #fff url('/login/password.png') 20px top no-repeat;
     background-size: 16px 80px;
 }
 
 .login-block input#password:focus {
-    background: #fff url('password.png') 20px bottom no-repeat;
+    background: #fff url('/login/password.png') 20px bottom no-repeat;
     background-size: 16px 80px;
 }
 

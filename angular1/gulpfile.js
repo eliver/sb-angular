@@ -89,5 +89,5 @@ gulp.task('build', function(cb) {
         cb
     );
 });
-gulp.task('serve_dev', gulp.series('browserSync_dev','watch_dev'));
+gulp.task('serve_dev', gulp.series('build_dev','browserSync_dev','watch_dev'));
 

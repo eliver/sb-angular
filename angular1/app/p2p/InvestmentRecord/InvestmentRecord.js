@@ -3,8 +3,9 @@
 angular.module('myApp.investmentRecord', ['ui.router'])
   .config(['$stateProvider', function ($stateProvider) {
     var p2pState = {
-      name: 'p2p.invest', url: '/investment_record',
-      templateUrl: 'InvestmentRecord/InvestmentRecord.html',
+      name: 'p2p.invest',
+      url: '/investment_record',
+      templateUrl: 'p2p/InvestmentRecord/InvestmentRecord.html',
       controller: 'InvestmentRecordCtrl'
     };
     $stateProvider.state(p2pState);
