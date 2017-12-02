@@ -13,7 +13,7 @@
     <table id="data-content">
         <tbody>
         <tr id="order">
-            <th index="0" colspan="2" class="down">平台&nbsp;/&nbsp;项目名称<i class="icn order-icn"></i></th>
+            <th index="0" colspan="2" class="down">投资人<i class="icn order-icn"></i></th>
             <th index="1" class="">投资日期<i class="icn order-icn"></i></th>
             <th index="2">投入本金<i class="icn order-icn"></i></th>
             <th index="3">项目年化<i class="icn order-icn"></i></th>
@@ -26,11 +26,11 @@
 
         <tr ng-repeat="item in investList">
             <td colspan="2">{{item.name}}</td>
-            <td>{{item.createdDate}}</td>
+            <td>{{item.startDate | date : 'yyyy-MM-dd'}}</td>
             <td>{{item.amount}}</td>
-            <td>{{item.rate}}</td>
-            <td>{{item.name}}</td>
-            <td>{{item.name}}</td>
+            <td>{{item.rate}}%</td>
+            <td>{{item.amount}}</td>
+            <td>{{item.amount}}</td>
         </tr>
         <tr class="recond_footer">
             <td colspan="2">合计</td>

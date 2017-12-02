@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.management', ['ui.router'])
+angular.module('myApp.management', ['ui.router', '720kb.datepicker'])
 
   .config(['$stateProvider', function ($stateProvider) {
     var managementState = {
@@ -10,7 +10,6 @@ angular.module('myApp.management', ['ui.router'])
       controller: 'ManagementCtrl'
     }
     $stateProvider.state(managementState);
-
   }])
   .controller('ManagementCtrl', ManagementCtrl);
 
@@ -32,8 +31,8 @@ function ManagementCtrl($scope, RestService) {
     invest.name = $scope.name;
     invest.amount = $scope.amount;
     invest.rate = $scope.rate;
-    //invest.startDate = $scope.startDate;
-    //invest.endDate = $scope.endDate;
+    invest.startDate = $scope.startDate;
+    invest.endDate = $scope.endDate;
 
     var invests = [];
     invests.push(invest);

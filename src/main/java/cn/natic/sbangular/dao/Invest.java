@@ -18,6 +18,8 @@ public class Invest implements Serializable {
     @Column(precision = 10, scale = 6)
     private BigDecimal rate;
     private String owner;
+    private Date startDate;
+    private Date endDate;
 
     private Date createdDate;
     private Date lastModifiedDate;
@@ -26,6 +28,22 @@ public class Invest implements Serializable {
 
     public Invest() {
 
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
     }
 
     public String getPhone() {
