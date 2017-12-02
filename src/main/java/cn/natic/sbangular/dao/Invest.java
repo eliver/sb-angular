@@ -11,6 +11,7 @@ public class Invest implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    private String phone;
     private String name;
     @Column(precision = 18, scale = 2)
     private BigDecimal amount;
@@ -22,6 +23,18 @@ public class Invest implements Serializable {
     private Date lastModifiedDate;
     private String createdBy;
     private String lastModifiedBy;
+
+    public Invest() {
+
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     public String getOwner() {
         return owner;

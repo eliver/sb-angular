@@ -3,10 +3,13 @@
 angular.module('myApp.login', ['ui.router'])
 
   .config(['$stateProvider', function ($stateProvider) {
-      var loginState = {name:'login',url:'/login',
-          templateUrl: 'login/login.html',
-          controller: 'LoginCtrl'}
-      $stateProvider.state(loginState);
+    var loginState = {
+      name: 'login',
+      url: '/login',
+      templateUrl: 'login/login.html',
+      controller: 'LoginCtrl'
+    }
+    $stateProvider.state(loginState);
 
   }])
   .controller('LoginCtrl', LoginCtrl);
