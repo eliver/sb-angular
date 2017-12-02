@@ -30,47 +30,53 @@ function RestService($http, $q) {
   svc.getUsers = function () {
     var deferred = $q.defer();
     $http.post('http://localhost:8080/users')
-      .then(function (value) {
-        if (value.status === 200) {
-          deferred.resolve(value.data);
+      .then(function (response) {
+        if (response.status === 200) {
+          deferred.resolve(response.data);
         } else {
-          deferred.reject(value.statusText);
+          deferred.reject(response.statusText);
         }
       });
 
     return deferred.promise;
   };
+
   svc.getAccountDetail = function () {
     var deferred = $q.defer();
     $http.post('http://localhost:8080/details')
-      .then(function (value) {
-        if (value.status === 200) {
-          deferred.resolve(value.data);
+      .then(function (response) {
+        if (response.status === 200) {
+          deferred.resolve(response.data);
         } else {
-          deferred.reject(value.statusText);
+          deferred.reject(response.statusText);
         }
       });
 
     return deferred.promise;
   };
+
   svc.getInvestRecord = function () {
     var deferred = $q.defer();
-    $http.get('mockData/Invest_Record.json').then(function (response) {
-      deferred.resolve(response.data);
-    }, function () {
-      deferred.reject(value.statusText);
-    });
+    $http.post('http://localhost:8080/investList')
+      .then(function (response) {
+        if (response.status === 200) {
+          deferred.resolve(response.data);
+        } else {
+          deferred.reject(response.data);
+        }
+      });
+
     return deferred.promise;
   };
 
   svc.addInvests = function (invests) {
     var deferred = $q.defer();
     $http.post('http://localhost:8080/addInvests', JSON.stringify(invests[0]), {})
-      .then(function (value) {
-        if (value.status === 200) {
-          deferred.resolve(value);
+      .then(function (response) {
+        if (response.status === 200) {
+          deferred.resolve(response.data);
         } else {
-          deferred.reject(value);
+          deferred.reject(response.data);
         }
       });
 

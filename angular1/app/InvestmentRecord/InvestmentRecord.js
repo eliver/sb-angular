@@ -8,14 +8,16 @@ angular.module('myApp.investmentRecord', ['ui.router'])
       controller: 'InvestmentRecordCtrl'
     };
     $stateProvider.state(p2pState);
-  }]);
+  }])
+  .controller('InvestmentRecordCtrl', InvestmentRecordCtrl);
 
-InvestmentRecordCtrl.$inject = ['$scope', '$location', 'RestService', 'NgTableParams'];
+InvestmentRecordCtrl.$inject = ['$scope', 'RestService'];
 
-function InvestmentRecordCtrl($scope, $location, RestService, NgTableParams) {
-  var ctrl = this;
-  RestService.getInvestRecord().then(function (data) {
-    ctrl.dataList = data;
-    ctrl.tableParams = new NgTableParams({count: 5}, {counts: [5, 10, 25], dataset: data});
-  });
+function InvestmentRecordCtrl($scope, RestService) {
+  $scope.investList = [];
+  RestService.getInvestRecord()
+    .then(function (data) {
+        $scope.investList = data;
+      }
+    );
 }

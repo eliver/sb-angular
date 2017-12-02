@@ -1,9 +1,15 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>投资记录</title>
+</head>
+<body>
 <div>
     <p class="rc-title">投资记录</p>
 </div>
 
-<div class="table box martop" ng-controller="InvestmentRecordCtrl as ctrl">
+<div class="table box martop">
     <table id="data-content">
         <tbody>
         <tr id="order">
@@ -13,18 +19,18 @@
             <th index="3">项目年化<i class="icn order-icn"></i></th>
             <th index="4">总奖励<i class="icn order-icn"></i></th>
             <th index="5">待收总额<i class="icn order-icn"></i></th>
-            <th style="text-align: center">详情</th>
+            <!--<th style="text-align: center">详情</th>
             <th style="text-align: center">操作</th>
-            <th index="6" style="text-align: center">备注<i class="icn order-icn"></i></th>
+            <th index="6" style="text-align: center">备注<i class="icn order-icn"></i></th>-->
         </tr>
 
-        <tr ng-repeat="item in ctrl.dataList">
-            <td colspan="2">{{item.platform_name}}</td>
-            <td>{{item.investment_date}}</td>
-            <td>{{item.primary_money}}</td>
-            <td>{{item.invest_interest_rate}}</td>
-            <td>{{item.total_bonus}}</td>
-            <td>{{item.future_total}}</td>
+        <tr ng-repeat="item in investList">
+            <td colspan="2">{{item.name}}</td>
+            <td>{{item.createdDate}}</td>
+            <td>{{item.amount}}</td>
+            <td>{{item.rate}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.name}}</td>
         </tr>
         <tr class="recond_footer">
             <td colspan="2">合计</td>
@@ -48,7 +54,7 @@
             </ul>
         </div>
     </div>
-    <table ng-table="ctrl.tableParams" class="table" show-filter="false">
+    <!--<table ng-table="ctrl.tableParams" class="table" show-filter="false">
         <tr ng-repeat="user in $data">
             <td title="'平台 / 项目名称'"  sortable="'name'">
                 {{user.platform_name}}</td>
@@ -64,6 +70,7 @@
                 {{user.future_total}}</td>
 
         </tr>
-    </table>
+    </table>-->
 
 </div>
+</body>
