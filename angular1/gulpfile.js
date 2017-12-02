@@ -10,8 +10,20 @@ var minifyCSS = require('gulp-minify-css');
 var clean = require('gulp-clean');
 var runSequence = require('run-sequence');
 
+var conf = require('./conf/gulp.conf');
+
+var HubRegistry = require('gulp-hub');
+
+
+var hub = new HubRegistry([conf.path.tasks('*.js')]);
+
+
+// Tell gulp to use the tasks just loaded
+gulp.registry(hub);
 // tasks
+
 gulp.task('lint', function() {
+    return;
    /* gulp.src(['./app/!**!/!*.js', '!./app/bower_components/!**'])
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
@@ -46,6 +58,7 @@ gulp.task('copy-html-files', function () {
     gulp.src('./app/**/*.html')
         .pipe(gulp.dest('../src/main/resources/static/'));
 });
+
 gulp.task('connect', function () {
     connect.server({
         root: 'app/',
@@ -60,10 +73,7 @@ gulp.task('connectDist', function () {
 });
 
 
-// default task
-gulp.task('default',
-    ['build']
-);
+
 gulp.task('build', function(cb) {
     runSequence(
         ['clean'],
@@ -79,3 +89,5 @@ gulp.task('build', function(cb) {
         cb
     );
 });
+gulp.task('serve_dev', gulp.series('browserSync_dev','watch_dev'));
+

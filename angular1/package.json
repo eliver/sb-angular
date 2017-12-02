@@ -8,8 +8,15 @@
   "devDependencies": {
     "angular-cookies": "^1.6.6",
     "bower": "^1.7.7",
+    "browser-sync": "^2.18.13",
+    "browser-sync-spa": "^1.0.3",
+    "del": "^3.0.0",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-bower": "0.0.13",
     "gulp-concat": "^2.6.1",
+    "gulp-hub": "github:frankwallis/gulp-hub#d461b9c700df9010d0a8694e4af1fb96d9f38bf4",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-glob": "^1.0.8",
     "http-server": "^0.9.0",
     "jasmine-core": "^2.4.1",
     "jshint": "^2.9.5",
@@ -38,7 +45,6 @@
   },
   "dependencies": {
     "bower": "^1.8.2",
-    "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-connect": "^5.0.0",
     "gulp-jshint": "^2.0.4",
