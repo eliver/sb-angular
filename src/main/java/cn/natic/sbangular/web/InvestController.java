@@ -83,7 +83,15 @@ public class InvestController {
     public List<Invest> getInvestList() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String username = auth.getName();
-        List<Invest> invests = investRepository.findByOwnerUsername(username);
+        User user = userRepository.findByUsername(username);
+        List<Invest> invests = new ArrayList<Invest>();
+
+        if ("admin".equals(user.getRole())) {
+            invests = investRepository.findAll();
+        } else {
+            invests = investRepository.findByOwnerUsername(username);
+        }
+
         return invests;
     }
 

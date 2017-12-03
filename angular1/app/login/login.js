@@ -26,7 +26,7 @@ function LoginCtrl($scope, $location, RestService) {
       .then(function (data) {
         var token = data('Authorization');
         if (token) {
-          $location.path("/p2p");
+          $location.path("/p2p/client_account");
         }
       }, function (err) {
         alert("用户名或密码错误，请联系管理员！")

@@ -11,8 +11,6 @@ public class Invest implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String phone;
-    private String name;
     @Column(precision = 18, scale = 2)
     private BigDecimal amount;
     @Column(precision = 10, scale = 6)
@@ -21,11 +19,6 @@ public class Invest implements Serializable {
     private User owner;
     private Date startDate;
     private Date endDate;
-
-    private Date createdDate;
-    private Date lastModifiedDate;
-    private String createdBy;
-    private String lastModifiedBy;
 
 
     public Invest() {
@@ -48,14 +41,6 @@ public class Invest implements Serializable {
         this.endDate = endDate;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
     public User getOwner() {
         return owner;
     }
@@ -70,14 +55,6 @@ public class Invest implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public BigDecimal getAmount() {
@@ -96,35 +73,4 @@ public class Invest implements Serializable {
         this.rate = rate;
     }
 
-    public Date getCreatedDate() {
-        return createdDate;
-    }
-
-    public void setCreatedDate(Date createdDate) {
-        this.createdDate = createdDate;
-    }
-
-    public Date getLastModifiedDate() {
-        return lastModifiedDate;
-    }
-
-    public void setLastModifiedDate(Date lastModifiedDate) {
-        this.lastModifiedDate = lastModifiedDate;
-    }
-
-    public String getCreatedBy() {
-        return createdBy;
-    }
-
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    public String getLastModifiedBy() {
-        return lastModifiedBy;
-    }
-
-    public void setLastModifiedBy(String lastModifiedBy) {
-        this.lastModifiedBy = lastModifiedBy;
-    }
 }

@@ -101,20 +101,15 @@
   <table id="data-content">
     <tbody>
     <tr id="order">
-      <th index="1" colspan="2">平台&nbsp;/&nbsp;项目名称<i class="icn order-icn"></i></th>
       <th index="3" class="" style="padding-left: 10px;">到期时间<i class="icn order-icn"></i></th>
       <th index="9">期数<i class="icn order-icn"></i></th>
       <th index="4">应收总额<i class="icn order-icn"></i></th>
       <th index="5">应收本金<i class="icn order-icn"></i></th>
       <th index="6">应收收益<i class="icn order-icn"></i></th>
       <th index="7">支付状态<i class="icn order-icn"></i></th>
-      <th>状态</th>
-      <th>详情</th>
-      <th>操作</th>
     </tr>
 
     <tr ng-repeat="item in paybackList">
-      <td colspan="2">{{item.invest.name}}</td>
       <td>{{item.paybackDay | date : 'yyyy-MM-dd'}}</td>
       <td>{{item.period}}</td>
       <td>{{item.paybackAmount}}</td>
@@ -123,17 +118,6 @@
       <td>{{item.paid ? "已支付" : "未支付"}}</td>
     </tr>
 
-    <tr class="recond_footer">
-      <td colspan="2">合计</td>
-      <td>--</td>
-      <td>--</td>
-      <td><span title="本金:0.00 收益:0.00">0.00</span></td>
-      <td>0.00</td>
-      <td>0.00</td>
-      <td>--</td>
-      <td>--</td>
-      <td>--</td>
-    </tr>
     </tbody>
   </table>
   <div class="pager">

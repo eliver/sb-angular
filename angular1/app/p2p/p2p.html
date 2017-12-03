@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="p2p/header.css">
-    <link rel="stylesheet" href="p2p/style.css">
-    <link rel="stylesheet" href="p2p/frame.css">
-    <link rel="stylesheet" href="p2p/p2p.css">
-    <link rel="stylesheet" href="p2p/tableData.css">
-    <link rel="stylesheet" href="p2p/searchPanel.css">
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="p2p/header.css">
+  <link rel="stylesheet" href="p2p/style.css">
+  <link rel="stylesheet" href="p2p/frame.css">
+  <link rel="stylesheet" href="p2p/p2p.css">
+  <link rel="stylesheet" href="p2p/tableData.css">
+  <link rel="stylesheet" href="p2p/searchPanel.css">
 </head>
 <body>
 <div class="header header-index down-header">
-    <div class="top-layout clr">
-        <a class="bdd-logo" href="/index"><h1 class="logo" id="logo"></h1></a>
-        <div class="nav_head clr" id="nav-head">
-            <ul id="index_head_list" class="clr">
-                <li id="li_login" class="li li_login fr">
-                    <div id="loginTag" style="display: none">
-                        <a id="loginBtn" class="login-btn" href="#loginBox">登录</a><span class="seq">|</span><a
-                            id="regist-btn" class="regist-btn" href="/register">注册</a>
-                    </div>
-                    <div id="loggedBtn" style="">
-                        <a id="slogan" >{{loginUser.name}}</a><span
-                            class="seq">|</span><a class="log-out" ng-click="logout()">退出</a>
-                    </div>
-                </li>
-                <li class="li fr" ui-sref-active="on"><a ui-sref="p2p.user">用户管理</a></li>
-                <li class="li fr" ui-sref-active="on"><a ui-sref="p2p.management">后台管理</a></li>
-                <li class="li fr" ui-sref-active="on"><a ui-sref="p2p.payback_detail">回款明细</a></li>
-                <li class="li fr" ui-sref-active="on"><a ui-sref="p2p.payback_trend">每月回款</a></li>
-                <li class="li fr" ui-sref-active="on"><a ui-sref="p2p.invest">投资记录</a></li>
-                <li class="li fr" ui-sref-active="on"><a ui-sref="p2p.client_account">资产概览</a></li>
+  <div class="top-layout clr">
+    <a class="bdd-logo" href="/index"><h1 class="logo" id="logo"></h1></a>
+    <div class="nav_head clr" id="nav-head">
+      <ul id="index_head_list" class="clr">
+        <li id="li_login" class="li li_login fr">
+          <div id="loggedBtn" style="">
+            <a id="slogan">{{loginUser.name}}</a><span
+              class="seq">|</span><a class="log-out" ng-click="logout()">退出</a>
+          </div>
+        </li>
+        <li class="li fr" ui-sref-active="on">
+          <a ui-sref="p2p.user" ng-show="loginUser.role == 'admin'">用户管理</a>
+        </li>
+        <li class="li fr" ui-sref-active="on">
+          <a ui-sref="p2p.management" ng-show="loginUser.role == 'admin'">后台管理</a>
+        </li>
+        <li class="li fr" ui-sref-active="on"><a ui-sref="p2p.payback_detail">回款明细</a></li>
+        <li class="li fr" ui-sref-active="on"><a ui-sref="p2p.payback_trend">每月回款</a></li>
+        <li class="li fr" ui-sref-active="on"><a ui-sref="p2p.invest">投资记录</a></li>
+        <li class="li fr" ui-sref-active="on"><a ui-sref="p2p.client_account">资产概览</a></li>
 
-            </ul>
-        </div>
-        <div class="down_nav_head clr" id="down_nav_head" style="display: none">
-            <ul id="down_head_list" class="down-head-list clr">
-                <li class="top-qr"><span class="top-icon-qr"></span></li>
-                <li class="top-ios-download"><a
-                        href="https://itunes.apple.com/cn/app/bei-duo-duo-p2p-ji-zhang-ben/id982758376?mt=8">立即下载</a>
-                </li>
-                <li class="top-android-download"><a href="http://res.daiyoubang.com/apks/beidd.apk">立即下载</a></li>
-            </ul>
-        </div>
+      </ul>
     </div>
+    <div class="down_nav_head clr" id="down_nav_head" style="display: none">
+      <ul id="down_head_list" class="down-head-list clr">
+        <li class="top-qr"><span class="top-icon-qr"></span></li>
+        <li class="top-ios-download"><a
+            href="https://itunes.apple.com/cn/app/bei-duo-duo-p2p-ji-zhang-ben/id982758376?mt=8">立即下载</a>
+        </li>
+        <li class="top-android-download"><a href="http://res.daiyoubang.com/apks/beidd.apk">立即下载</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
-<div class="main-div">
-    <div class="content-div">
-        <div class="p-content">
+<div class="main-div row">
+  <div class="content-div">
+    <div class="p-content">
 
-            <div class="content" ui-view>
+      <div class="content" ui-view>
 
 
-            </div>
-        </div>
-
+      </div>
     </div>
+
+  </div>
 </div>
 </body>
 </html>
