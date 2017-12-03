@@ -41,9 +41,9 @@ function RestService($http, $q) {
     return deferred.promise;
   };
 
-  svc.getAccountDetail = function () {
+  svc.getClientAccount = function () {
     var deferred = $q.defer();
-    $http.post('http://localhost:8080/details')
+    $http.post('http://localhost:8080/clientAccount')
       .then(function (response) {
         if (response.status === 200) {
           deferred.resolve(response.data);

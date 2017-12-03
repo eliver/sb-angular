@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
@@ -35,8 +36,16 @@ public class InvestController {
         String username = auth.getName();
         List<Invest> invests = repository.findByOwner(username);
 
+        ClientAccount ca = new ClientAccount();
+        ca.setToBeCollectedAmount(new BigDecimal(1000));
+        ca.setToBeCollectedPrincipal(new BigDecimal(1000));
+        ca.setToBeCollectedInterest(new BigDecimal(1000));
+        ca.setEarnedInterest(new BigDecimal(1000));
+        ca.setTodayInterest(new BigDecimal(1000));
+        ca.setTotalInterest(new BigDecimal(1000));
+        ca.setInterestPerYear(new BigDecimal(1000));
 
-        return new ClientAccount();
+        return ca;
     }
 
     @RequestMapping("/investList")
