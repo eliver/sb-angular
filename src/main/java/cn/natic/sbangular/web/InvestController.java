@@ -61,7 +61,7 @@ public class InvestController {
         return true;
     }
 
-    @RequestMapping("/clientAccount")
+    @RequestMapping("/getClientAccount")
     public ClientAccount getClientAccount() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String username = auth.getName();
@@ -79,7 +79,7 @@ public class InvestController {
         return ca;
     }
 
-    @RequestMapping("/investList")
+    @RequestMapping("/getInvestList")
     public List<Invest> getInvestList() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String username = auth.getName();
@@ -100,7 +100,7 @@ public class InvestController {
         return null;
     }
 
-    @RequestMapping("/paybackDetail")
+    @RequestMapping("/getPaybackDetail")
     public List<Payback> getPaybackDetail() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String username = auth.getName();

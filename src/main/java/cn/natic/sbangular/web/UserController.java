@@ -35,7 +35,7 @@ public class UserController {
         return repository.save(user);
     }
 
-    @RequestMapping("/allUsers")
+    @RequestMapping("/getAllUsers")
     public List<User> getAllUsers() {
         return repository.findAll();
     }

@@ -17,7 +17,7 @@ InvestmentRecordCtrl.$inject = ['$scope', 'RestService'];
 
 function InvestmentRecordCtrl($scope, RestService) {
   $scope.investList = [];
-  RestService.getInvestRecord()
+  RestService.getInvestList()
     .then(function (data) {
         $scope.investList = data;
       }
