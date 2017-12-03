@@ -17,7 +17,8 @@ public class Invest implements Serializable {
     private BigDecimal amount;
     @Column(precision = 10, scale = 6)
     private BigDecimal rate;
-    private String owner;
+    @ManyToOne
+    private User owner;
     private Date startDate;
     private Date endDate;
 
@@ -25,6 +26,7 @@ public class Invest implements Serializable {
     private Date lastModifiedDate;
     private String createdBy;
     private String lastModifiedBy;
+
 
     public Invest() {
 
@@ -54,11 +56,11 @@ public class Invest implements Serializable {
         this.phone = phone;
     }
 
-    public String getOwner() {
+    public User getOwner() {
         return owner;
     }
 
-    public void setOwner(String owner) {
+    public void setOwner(User owner) {
         this.owner = owner;
     }
 

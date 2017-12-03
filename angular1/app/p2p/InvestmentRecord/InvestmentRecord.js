@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.investmentRecord', ['ui.router'])
+angular.module('p2p.investmentRecord', ['ui.router'])
 
   .config(['$stateProvider', function ($stateProvider) {
     var p2pState = {

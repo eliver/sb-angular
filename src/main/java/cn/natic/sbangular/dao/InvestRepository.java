@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface InvestRepository extends JpaRepository<Invest, Long> {
 
-    List<Invest> findByOwner(String owner);
+    List<Invest> findByOwnerUsername(String username);
 
     @Transactional
     Invest save(Invest invest);

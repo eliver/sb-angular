@@ -1,8 +1,11 @@
 angular.module('myApp.p2p', [
   'ui.router',
   'p2p.client_account',
+  'p2p.investmentRecord',
   'p2p.payback_trend',
-  'p2p.payback_detail'
+  'p2p.payback_detail',
+  'p2p.management',
+  'p2p.user'
 ])
   .config(['$stateProvider', function ($stateProvider) {
     var p2pState = {

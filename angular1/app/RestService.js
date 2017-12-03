@@ -27,9 +27,9 @@ function RestService($http, $q) {
     return deferred.promise;
   };
 
-  svc.getUsers = function () {
+  svc.addUser = function (user) {
     var deferred = $q.defer();
-    $http.post('http://localhost:8080/users')
+    $http.post('http://localhost:8080/addUser', JSON.stringify(user), {})
       .then(function (response) {
         if (response.status === 200) {
           deferred.resolve(response.data);
@@ -40,6 +40,34 @@ function RestService($http, $q) {
 
     return deferred.promise;
   };
+
+  svc.getAllUsers = function () {
+    var deferred = $q.defer();
+    $http.post('http://localhost:8080/allUsers', {}, {})
+      .then(function (response) {
+        if (response.status === 200) {
+          deferred.resolve(response.data);
+        } else {
+          deferred.reject(response.statusText);
+        }
+      });
+
+    return deferred.promise;
+  }
+
+  svc.upsertUsers = function (users) {
+    var deferred = $q.defer();
+    $http.post('http://localhost:8080/upsertUsers', JSON.stringify(users), {})
+      .then(function (response) {
+        if (response.status === 200) {
+          deferred.resolve(response.data);
+        } else {
+          deferred.reject(response.statusText);
+        }
+      });
+
+    return deferred.promise;
+  }
 
   svc.getClientAccount = function () {
     var deferred = $q.defer();
@@ -62,7 +90,7 @@ function RestService($http, $q) {
         if (response.status === 200) {
           deferred.resolve(response.data);
         } else {
-          deferred.reject(response.data);
+          deferred.reject(response.statusText);
         }
       });
 
@@ -76,7 +104,21 @@ function RestService($http, $q) {
         if (response.status === 200) {
           deferred.resolve(response.data);
         } else {
-          deferred.reject(response.data);
+          deferred.reject(response.statusText);
+        }
+      });
+
+    return deferred.promise;
+  }
+
+  svc.getPaybackDetail = function () {
+    var deferred = $q.defer();
+    $http.post('http://localhost:8080/paybackDetail', {}, {})
+      .then(function (response) {
+        if (response.status === 200) {
+          deferred.resolve(response.data);
+        } else {
+          deferred.reject(response.statusText);
         }
       });
 

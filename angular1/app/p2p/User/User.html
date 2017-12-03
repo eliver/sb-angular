@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>用户管理</title>
+</head>
+<body>
+<table class="table">
+  <thead>
+  <tr>
+    <th>用户名</th>
+    <th>密码</th>
+    <th>姓名</th>
+    <th>角色</th>
+    <th>启用</th>
+    <th>
+      <button class="btn btn-primary" ng-class="add ? 'disabled' : 'false'" ng-click="addUser()">增加用户</button>
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-show="add">
+    <td>
+      <input type="text" ng-model="newUser.username">
+    </td>
+    <td>
+      <input type="text" ng-model="newUser.password">
+    </td>
+    <td>
+      <input type="text" ng-model="newUser.name">
+    </td>
+    <td>
+      <select class="form-control" ng-model="newUser.role">
+        <option value="admin">管理员</option>
+        <option value="investor">投资者</option>
+      </select>
+    </td>
+    <td>
+      <input type="checkbox" ng-model="newUser.enabled">
+    </td>
+  </tr>
+  <tr ng-repeat="user in users">
+    <td>
+      <input type="text" ng-model="user.username">
+    </td>
+    <td>
+      <input type="text" ng-model="user.password">
+    </td>
+    <td>
+      <input type="text" ng-model="user.name">
+    </td>
+    <td>
+      <select id="role" class="form-control" ng-model="user.role">
+        <option value="admin">管理员</option>
+        <option value="investor">投资者</option>
+      </select>
+    </td>
+    <td>
+      <input type="checkbox" ng-model="user.enabled">
+    </td>
+  </tr>
+  </tbody>
+</table>
+<button class="btn btn-primary" ng-click="save()">保存</button>
+</body>
+</html>

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.management', ['ui.router', '720kb.datepicker'])
+angular.module('p2p.management', ['ui.router', '720kb.datepicker'])
 
   .config(['$stateProvider', function ($stateProvider) {
     var managementState = {
@@ -17,6 +17,9 @@ ManagementCtrl.$inject = ['$scope', 'RestService'];
 
 function ManagementCtrl($scope, RestService) {
 
+  $scope.invest = {};
+  $scope.user = {};
+
   $scope.phone = '';
   $scope.name = '';
   $scope.amount = '';
@@ -26,6 +29,7 @@ function ManagementCtrl($scope, RestService) {
 
 
   $scope.addInvests = function () {
+
     var invest = {};
     invest.phone = $scope.phone;
     invest.name = $scope.name;
@@ -37,6 +41,13 @@ function ManagementCtrl($scope, RestService) {
     var invests = [];
     invests.push(invest);
     RestService.addInvests(invests);
+
   }
+
+  $scope.addUser = function () {
+    $scope.user.enabled = true;
+    RestService.addUser($scope.user);
+  }
+
 
 }

@@ -7,8 +7,6 @@ angular.module('myApp', [
   'ngCookies',
   'myApp.login',
   'myApp.p2p',
-  'myApp.investmentRecord',
-  'myApp.management',
   'ngTable'
 ])
   .config(['$urlRouterProvider', function ($urlRouterProvider) {

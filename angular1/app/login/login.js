@@ -28,6 +28,8 @@ function LoginCtrl($scope, $location, RestService) {
         if (token) {
           $location.path("/p2p");
         }
+      }, function (err) {
+        alert("用户名或密码错误，请联系管理员！")
       });
   }
 
