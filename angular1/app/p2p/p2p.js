@@ -16,8 +16,25 @@ angular.module('myApp.p2p', [
     $stateProvider.state(p2pState);
   }])
   .controller('p2pCtrl', p2pCtrl);
+
 p2pCtrl.$inject = ['$scope', '$location', 'RestService'];
 
 function p2pCtrl($scope, $location, RestService) {
 
+  $scope.loginUser= {};
+  RestService.getLoginUser()
+    .then(function (data) {
+      $scope.loginUser = data;
+    });
+
+  $scope.logout = function () {
+
+    var $cookies;
+    angular.injector(['ngCookies']).invoke(['$cookies', function(_$cookies_) {
+      $cookies = _$cookies_;
+    }]);
+
+    $cookies.remove('token');
+    $location.path("/login");
+  }
 }

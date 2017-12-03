@@ -17,4 +17,5 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     @Transactional
     <S extends User> List<S> save(Iterable<S> users);
+
 }

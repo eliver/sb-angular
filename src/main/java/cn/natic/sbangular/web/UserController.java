@@ -3,6 +3,8 @@ package cn.natic.sbangular.web;
 import cn.natic.sbangular.dao.User;
 import cn.natic.sbangular.dao.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +17,18 @@ public class UserController {
 
     @Autowired
     UserRepository repository;
+
+    @RequestMapping("/getLoginUser")
+    public User getLoginUser() {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String username = auth.getName();
+        return repository.findByUsername(username);
+    }
+
+    @RequestMapping("/deleteUser")
+    public void deleteUser(@RequestBody User user) {
+        repository.delete(user);
+    }
 
     @RequestMapping("/addUser")
     public User addUser(@RequestBody User user) {

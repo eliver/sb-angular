@@ -22,8 +22,8 @@
                             id="regist-btn" class="regist-btn" href="/register">注册</a>
                     </div>
                     <div id="loggedBtn" style="">
-                        <a id="slogan" href="/bbs/author/b9653e9e-bc8a-11e7-b708-8038bc0bae77">yi shao</a><span
-                            class="seq">|</span><a class="log-out" href="/action/user/logout">退出</a>
+                        <a id="slogan" >{{loginUser.name}}</a><span
+                            class="seq">|</span><a class="log-out" ng-click="logout()">退出</a>
                     </div>
                 </li>
                 <li class="li fr" ui-sref-active="on"><a ui-sref="p2p.user">用户管理</a></li>

@@ -44,5 +44,15 @@ function UserCtrl($scope, RestService) {
       });
 
   };
+  
+  $scope.delete = function (user) {
+    RestService.deleteUser(user)
+      .then(function (data) {
+        RestService.getAllUsers()
+          .then(function (data) {
+            $scope.users = data;
+          });
+      });
+  }
 
 }

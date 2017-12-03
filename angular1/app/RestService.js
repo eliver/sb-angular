@@ -27,6 +27,20 @@ function RestService($http, $q) {
     return deferred.promise;
   };
 
+  svc.getLoginUser = function () {
+    var deferred = $q.defer();
+    $http.post('http://localhost:8080/getLoginUser', {}, {})
+      .then(function (response) {
+        if (response.status === 200) {
+          deferred.resolve(response.data);
+        } else {
+          deferred.reject(response.statusText);
+        }
+      });
+
+    return deferred.promise;
+  }
+
   svc.addUser = function (user) {
     var deferred = $q.defer();
     $http.post('http://localhost:8080/addUser', JSON.stringify(user), {})
@@ -40,6 +54,20 @@ function RestService($http, $q) {
 
     return deferred.promise;
   };
+
+  svc.deleteUser = function (user) {
+    var deferred = $q.defer();
+    $http.post('http://localhost:8080/deleteUser', JSON.stringify(user), {})
+      .then(function (response) {
+        if (response.status === 200) {
+          deferred.resolve(response.data);
+        } else {
+          deferred.reject(response.statusText);
+        }
+      });
+
+    return deferred.promise;
+  }
 
   svc.getAllUsers = function () {
     var deferred = $q.defer();

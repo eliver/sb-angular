@@ -18,7 +18,6 @@ ManagementCtrl.$inject = ['$scope', 'RestService'];
 function ManagementCtrl($scope, RestService) {
 
   $scope.invest = {};
-  $scope.user = {};
 
   $scope.phone = '';
   $scope.name = '';
@@ -42,11 +41,6 @@ function ManagementCtrl($scope, RestService) {
     invests.push(invest);
     RestService.addInvests(invests);
 
-  }
-
-  $scope.addUser = function () {
-    $scope.user.enabled = true;
-    RestService.addUser($scope.user);
   }
 
 

@@ -12,7 +12,6 @@
     <th>密码</th>
     <th>姓名</th>
     <th>角色</th>
-    <th>启用</th>
     <th>
       <button class="btn btn-primary" ng-class="add ? 'disabled' : 'false'" ng-click="addUser()">增加用户</button>
     </th>
@@ -35,9 +34,6 @@
         <option value="investor">投资者</option>
       </select>
     </td>
-    <td>
-      <input type="checkbox" ng-model="newUser.enabled">
-    </td>
   </tr>
   <tr ng-repeat="user in users">
     <td>
@@ -56,7 +52,7 @@
       </select>
     </td>
     <td>
-      <input type="checkbox" ng-model="user.enabled">
+      <button class="btn btn-primary" ng-click="delete(this.user)">删除用户</button>
     </td>
   </tr>
   </tbody>
