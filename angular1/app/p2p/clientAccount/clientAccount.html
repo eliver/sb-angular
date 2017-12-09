@@ -44,16 +44,63 @@
     <tbody>
     <tr class="rc-zctitle">
       <td>
-        总收益
+        当月待回利息
       </td>
       <td>
-        总利息
+        当月已回利息
       </td>
       <td>
-        总奖励
+        当月总利息
       </td>
       <td>
-        在投年化收益
+        当月回本金
+      </td>
+    </tr>
+    <tr class="rc-zc-num">
+      <td>
+        {{clientAccount.todayInterest}}
+      </td>
+      <td>
+        {{clientAccount.totalInterest}}
+      </td>
+      <td>
+        {{clientAccount.interestPerYear}}
+      </td>
+      <td>
+        {{clientAccount.interestPerYear}}
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  管理员
+  <table class="p2-zctab">
+    <tbody>
+    <tr class="rc-zctitle">
+      <td>
+        当月已还本金
+      </td>
+      <td>
+        当月待还本金
+      </td>
+      <td>
+        当月总还本金
+      </td>
+
+      <td>
+        当月已还利息
+      </td>
+      <td>
+        当月待还利息
+      </td>
+      <td>
+        当月总还利息
+      </td>
+
+      <td>
+        当月待还本息
+      </td>
+      <td>
+        当月总还本息
       </td>
     </tr>
     <tr class="rc-zc-num">

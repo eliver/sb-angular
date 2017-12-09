@@ -10,7 +10,7 @@
 .login-block {
     width: 260px;
     padding: 20px;
-    background: darkgray url('/login/background.jpg') no-repeat fixed center center;
+    background: darkgray /*url('/login/background.jpg') no-repeat fixed center center*/;
     background-size: cover;
     border-radius: 5px;
     border-top: 5px solid #ff656c;

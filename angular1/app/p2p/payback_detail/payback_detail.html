@@ -3,7 +3,7 @@
   <p class="rc-title">回款明细</p>
 </div>
 
-<div class="search-div">
+<div class="search-div" style="display: none">
 
   <a id="fb-category" onclick="showPanel('category');" class="fb-btn first-item">
     <span id="stateText">未回款</span>
@@ -26,76 +26,10 @@
     </div>
   </div>
 
-
-  <a id="fb-platform" onclick="showPanel('platform');" class="fb-btn first-item">
-    <span id="platformText">选择平台</span>
-
-
-    <input type="hidden" id="platform" name="platform" value="none">
-
-
-  </a>
-
-  <div class="panel" id="panel-platform" tabindex="2">
-    <div class="p-tit png" id="p-tit-platform" onclick="hidePanel('platform')">选择平台</div>
-    <div class="p-box png">
-      <div class="p-list png">
-        <div class="p-list-box" id="panel-platform-list">
-          <ul id="pBox-cCat-platform" class="ul ">
-            <li class="pa-li" onclick="clickPlatformsLi('none')">所有平台</li>
-
-
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <a id="fb-time" onclick="showPanel('time');" class="fb-btn first-item">
-
-    <span id="timeText">到期时间</span>
-  </a>
-
-  <div class="panel" id="panel-time" tabindex="3">
-    <div class="p-tit png" id="p-tit-time" onclick="hidePanel('time')">到期时间</div>
-    <div class="p-box png" id="p-box-time">
-      <div class="p-list png">
-        <div class="p-list-box" id="panel-time-list">
-          <div class="p-time">
-            从
-            <div class="ipt-wrap">
-              <input id="startTime" type="text" value="" onclick="WdatePicker()" placeholder="起始日期">
-              <i class="icns"></i>
-            </div>
-            到
-            <div class="ipt-wrap">
-              <input id="endTime" type="text" value="" onclick="WdatePicker()" placeholder="终止日期">
-              <i class="icns"></i>
-            </div>
-            <div href="javascript:void(0);" id="time-sub">
-              <span class="time-btn">确定</span>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div class="btn-p" id="submit">查询</div>
 
 </div>
 
-
-<div class="search-time-text">
-  <p>时间
-    <span id="time-text-1" class="time-sp">2016年09月01日</span>至
-    <span id="time-text-2" class="time-sp">2016年09月01日</span>
-    <a class="cls-a" href="javascript:void(0);" onclick="clsTime();">
-    </a>
-  </p>
-</div>
 
 <div class="table box">
   <table id="data-content">
@@ -120,14 +54,4 @@
 
     </tbody>
   </table>
-  <div class="pager">
-    <div id="pager">
-      <ul class="pages">
-        <li class="pgNext pgEmpty">首页</li>
-        <li class="pgNext pgEmpty">上一页</li>
-        <li class="pgNext pgEmpty">下一页</li>
-        <li class="pgNext pgEmpty">尾页</li>
-      </ul>
-    </div>
-  </div>
 </div>

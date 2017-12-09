@@ -8,58 +8,23 @@
         <tr id="order">
             <th index="0" colspan="2" class="down">投资人<i class="icn order-icn"></i></th>
             <th index="1" class="">投资日期<i class="icn order-icn"></i></th>
+            <th index="1" class="">结束日期<i class="icn order-icn"></i></th>
             <th index="2">投入本金<i class="icn order-icn"></i></th>
             <th index="3">项目年化<i class="icn order-icn"></i></th>
-            <th index="4">总奖励<i class="icn order-icn"></i></th>
+            <th index="4">待收利息<i class="icn order-icn"></i></th>
             <th index="5">待收总额<i class="icn order-icn"></i></th>
         </tr>
 
         <tr ng-repeat="item in investList">
             <td colspan="2">{{item.owner.name}}</td>
             <td>{{item.startDate | date : 'yyyy-MM-dd'}}</td>
+            <td>{{item.startDate | date : 'yyyy-MM-dd'}}</td>
             <td>{{item.amount}}</td>
             <td>{{item.rate}}%</td>
             <td>{{item.amount}}</td>
             <td>{{item.amount}}</td>
         </tr>
-        <tr class="recond_footer">
-            <td colspan="2">合计</td>
-            <td>--</td>
-            <td>0.00</td>
-            <td>0.00%</td>
-            <td>0.00</td>
-            <td><span title="待收本金:0.00 待收收益:0.00">0.00</span></td>
-
-        </tr>
         </tbody>
     </table>
-
-    <div class="pager" style="border:0">
-        <div id="pager" style="border:0">
-            <ul class="pages">
-                <li class="pgNext pgEmpty">首页</li>
-                <li class="pgNext pgEmpty">上一页</li>
-                <li class="pgNext pgEmpty">下一页</li>
-                <li class="pgNext pgEmpty">尾页</li>
-            </ul>
-        </div>
-    </div>
-    <!--<table ng-table="ctrl.tableParams" class="table" show-filter="false">
-        <tr ng-repeat="user in $data">
-            <td title="'平台 / 项目名称'"  sortable="'name'">
-                {{user.platform_name}}</td>
-            <td title="'投资日期'"  sortable="'age'">
-                {{user.investment_date}}</td>
-            <td title="'投入本金'"  sortable="'age'">
-                {{user.primary_money}}</td>
-            <td title="'项目年化'"  sortable="'age'">
-                {{user.invest_interest_rate}}</td>
-            <td title="'总奖励'"  sortable="'age'">
-                {{user.total_bonus}}</td>
-            <td title="'待收总额'"  sortable="'age'">
-                {{user.future_total}}</td>
-
-        </tr>
-    </table>-->
 
 </div>
