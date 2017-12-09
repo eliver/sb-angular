@@ -7,8 +7,6 @@ var sassGlob = require('gulp-sass-glob');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var del = require('del');
-var angularFilesort = require('gulp-angular-filesort'),
-  inject = require('gulp-inject');
 const browserSync = require('browser-sync');
 
 
@@ -34,13 +32,12 @@ gulp.task('other', function () {
 
 gulp.task('js_main', function () {
     return gulp.src([
+      './app/bower_components/angularjs-datepicker/dist/angular-datepicker.js',
+      './app/app.js',
       './app/**/*.js',
       '!./app/bower_components/**'
     ])
       .pipe(concat('main.js'))
-      .pipe(inject(
-        gulp.src(['./app/**/*.js', '!./app/bower_components/**']).pipe(angularFilesort())
-      ))
       .pipe(gulp.dest('./dist/js'));
   }
 );
